@@ -16,7 +16,7 @@ inputs:
   remote_folder:
     description: 'Remote folder to chdir'
     required: false
-  repo_folder:
+  local_folder:
     description: 'Repository folder to transfer'
     required: false
   port:
