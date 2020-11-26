@@ -10,14 +10,23 @@ inputs:
   password:
     description: '(S)FTP password'
     required: false
-  folder:
-    description: 'Folder for chdir'
+  ssh_key:
+    description: 'SSH key used for the connection (passphrase is not supported)'
+    required: false
+  remote_folder:
+    description: 'Remote folder to chdir'
+    required: false
+  repo_folder:
+    description: 'Repository folder to transfer'
     required: false
   port:
     description: '(S)FTP port'
     required: false
   type:
     description: 'FTP or SFTP protocol'
+    required: false
+  put_github_sha:
+    description: 'Transfer file named with the pushed GitHub SHA'
     required: false
 output:
   exit-status:
@@ -29,6 +38,7 @@ runs:
     - ${{ inputs.host }}
     - ${{ inputs.username }}
     - ${{ inputs.password }}
+    - ${{ inputs.ssh_key }}
     - ${{ inputs.folder }}
     - ${{ inputs.port }}
     - ${{ inputs.type }}
