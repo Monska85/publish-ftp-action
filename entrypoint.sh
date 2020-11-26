@@ -24,6 +24,7 @@ BATCH_FILE=/tmp/commands
 if [ "${TYPE}" == "SFTP" ]; then
     echo "cd ${CHDIR}" > ${BATCH_FILE}
     echo "put *" >> ${BATCH_FILE}
+    echo "ls" >> ${BATCH_FILE}
     echo "bye" >> ${BATCH_FILE}
 
     sshpass -p "${PASSWORD}" sftp -P ${PORT} -oStrictHostKeyChecking=no -oBatchMode=no -b ${BATCH_FILE} ${USERNAME}@${HOST}

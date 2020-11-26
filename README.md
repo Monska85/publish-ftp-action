@@ -1,4 +1,4 @@
-# Publish FTP GitHub docker action
+# Publish (S)FTP GitHub docker action
 
 This action publish your repo in (S)FTP server.
 
@@ -16,7 +16,7 @@ This action publish your repo in (S)FTP server.
 
 The password fro access to the (S)FTP server.
 
-### directory
+### folder
 
 The folder used for `chdir` (default: `./`).
 
